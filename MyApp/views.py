@@ -55,7 +55,7 @@ def contactus(request):
 
             From: {}        
         '''.format(data['subject'], data['msg'], data['email'])
-        send_mail(data['subject'], mail, '', ['gandhidhyey1221@gmail.com'])
+        send_mail(data['subject'], mail, '', ['admin's emailID'])
         messages.success(request, 'Your message has been sent Successfully!!')
     return render(request, 'contact.html')
     # return HttpResponse("This is ContactUs page")
