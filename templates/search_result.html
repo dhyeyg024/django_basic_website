@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Searches{% endblock title %}Searches
+{% block body %}
+    <center>
+
+        {% if searched %}
+        <h3> You searched for... {{ searched }} </h3>
+        <br/>
+        
+        {% for component in components %}
+            {% if component %}
+            <a href="https://www.aorus.com/en-in">{{ component.type }}</a> - <strong>{{ component.name }}</strong>(INR{{component.price}})<br/>
+           
+            {% endif%}
+        {% endfor %}
+        {% else %}
+            <h3> You forgot to search! </h3>
+        {% endif %}
+        
+    </center>
+{% endblock body %}
